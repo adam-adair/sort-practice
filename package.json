@@ -1,0 +1,23 @@
+{
+  "name": "sort-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bubblesort.js",
+  "dependencies": {
+    "testem": "^3.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoegreene/sort-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoegreene/sort-practice/issues"
+  },
+  "homepage": "https://github.com/zoegreene/sort-practice#readme"
+}
