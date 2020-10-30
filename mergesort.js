@@ -9,19 +9,26 @@ function split(wholeArray) {
 }
 
 function merge(arrayOne, arrayTwo) {
-  // [1,3,5, 8 , 9] [2, 4, 6, 7]
   const returnArray = []
   let ptr1 = 0
   let ptr2 = 0
   while( ptr1 < arrayOne.length || ptr2 < arrayTwo.length) {
-    if(ptr2 > arrayTwo.length || arrayOne[ptr1] < arrayTwo[ptr2]) {
+    if(ptr2 === arrayTwo.length || arrayOne[ptr1] <= arrayTwo[ptr2]) {
       returnArray.push(arrayOne[ptr1])
       ptr1++
-    } else {
+    }
+    else if(ptr1 === arrayOne.length || arrayOne[ptr1] > arrayTwo[ptr2]) {
       returnArray.push(arrayTwo[ptr2])
       ptr2++
     }
-    console.log('ptr1:',ptr1,'ptr2:', ptr2)
   }
   return returnArray
+}
+
+function mergeSort(array) {
+  if(array.length === 1 ) return array
+  let [left, right] = split(array)
+  left = mergeSort(left)
+  right = mergeSort(right)
+  return merge(left, right)
 }
